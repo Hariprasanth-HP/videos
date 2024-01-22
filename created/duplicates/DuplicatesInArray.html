@@ -1,0 +1,14 @@
+<script>
+const arr = ['one', 'one', 'one', 
+'two', 'two', 'three'];
+
+const duplicateCount = (arr)=>{
+    const countObj = {};
+
+arr.forEach(element => {
+  countObj[element] = (countObj[element] || 0) + 1;
+});
+return countObj
+}
+console.log('duplicates object',duplicateCount(arr));
+</script>

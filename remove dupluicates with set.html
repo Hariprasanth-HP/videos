@@ -1,0 +1,14 @@
+<script>
+const productArr = [
+    {name:'brush',id:1},
+    {name:'paste',id:2},
+    {name:'light',id:3},
+    {name:'brush',id:1},
+]
+const removeDup = ([
+    ...new Set(productArr.map((arr)=>(JSON.stringify(arr))))
+])
+const parsedVal = (removeDup.map(arr=>JSON.parse(arr)))
+console.log((parsedVal))
+
+</script>

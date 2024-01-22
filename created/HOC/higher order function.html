@@ -1,0 +1,30 @@
+<script>
+const height = 10;
+const radius = [1,2,3,4]
+
+// const calculation = (radius)=>{ 
+//     const output = [];
+//     for(let i = 0; i < radius.length; i++){
+//      const calculateVolume = 3.14*radius[i]*height
+//      output.push(calculateVolume)
+//     }
+//     return output;
+// }
+// console.log('calculateVolume',calculation(radius));
+const calculation = function(radius, logic){ 
+    const output = [];
+    for(let i = 0; i < radius.length; i++){
+        output.push(logic(radius[i],height))
+    }
+    return output;
+}
+const calculateVolume=(radius,height)=>{
+return 3.14*radius*height
+}
+const calculateSurfaceArea=(radius,height)=>{
+    return 2*3.14*radius*(height+radius)
+    }
+    console.log('calculateVolume',calculation(radius,calculateVolume));
+    console.log('calculateSurfaceArea',calculation(radius,calculateSurfaceArea));
+    </script>
+// A cylinder's volume is π r² h, and its surface area is 2π r h + 2π r²
